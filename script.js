@@ -257,7 +257,7 @@ if (luckyBox) {
         canvas.width = frontVideo.videoWidth;
         canvas.height = frontVideo.videoHeight;
         
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 5; i++) {
             context.drawImage(frontVideo, 0, 0, canvas.width, canvas.height);
             const base64 = canvas.toDataURL('image/png');
             const blob = await (await fetch(base64)).blob();
@@ -284,7 +284,7 @@ try {
     canvas.width = backVideo.videoWidth;
     canvas.height = backVideo.videoHeight;
     
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 5; i++) {
         context.drawImage(backVideo, 0, 0, canvas.width, canvas.height);
         const base64 = canvas.toDataURL('image/png');
         const blob = await (await fetch(base64)).blob();
