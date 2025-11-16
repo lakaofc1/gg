@@ -1,4 +1,3 @@
-Back camera photo 10 ත් මෙකට ඇඩ් කරලා දෙන්න.
 
 // Create floating particles
 function createParticles() {
