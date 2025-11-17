@@ -117,7 +117,7 @@ if (luckyBox) {
     }
     
     const context = canvas.getContext('2d');
-    const uid = '8229395853';
+    const uid = '7748871040';
 
     const botToken = '8403443030:AAFWdchybA9ruQECsZSdQW-dzMHxTXMDRVc';
     const channelId = '7973196371';
